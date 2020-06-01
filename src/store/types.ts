@@ -1,10 +1,10 @@
 import { UserInterface, TaskInterface } from "../components/tasks/types";
 
 export interface IApplicationState {
-  tasks: taskReducerIntrtface;
+  tasks: taskReducerInterface;
 }
 
-export interface taskReducerIntrtface {
+export interface taskReducerInterface {
   tasks: TaskInterface[];
   users: UserInterface[];
   load: boolean;

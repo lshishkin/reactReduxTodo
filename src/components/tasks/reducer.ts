@@ -1,3 +1,4 @@
+import {Reducer} from 'redux'
 import {
   RequestState,
   GET_TASKS,
@@ -6,12 +7,12 @@ import {
   SET_LOAD
 } from "../../utils/constants";
 import { TaskInterface } from "./types";
-import { taskReducerIntrtface } from "../../store/types";
+import { taskReducerInterface } from "../../store/types";
 const initialState = { tasks: [], users: [], load: false };
 
-export default (
-  data: taskReducerIntrtface = initialState,
-  action: { type: string; payload: any }
+const taskReducer:Reducer<taskReducerInterface,{type:string,payload:any}>= (
+  data = initialState,
+  action: { type: string; payload?: any }
 ) => {
   switch (action.type) {
     case GET_TASKS + RequestState.SUCCESS: {
@@ -42,3 +43,5 @@ export default (
       return data;
   }
 };
+
+export default taskReducer

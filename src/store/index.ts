@@ -1,4 +1,4 @@
-import { combineReducers, Reducer } from "redux";
+import { combineReducers, Reducer} from "redux";
 import tasksReducer from "../components/tasks/reducer";
 import { IApplicationState } from "./types";
 
